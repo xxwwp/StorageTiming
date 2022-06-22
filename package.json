@@ -1,0 +1,32 @@
+{
+  "name": "storage-timing",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "set NODE_ENV=production&& npx rollup -c",
+    "test": "parcel test.html"
+  },
+  "files": [
+    "lib/index.d.ts",
+    "lib/index.js",
+    "lib/index.es.js",
+    "lib/index.umd.js"
+  ],
+  "author": "JiahaoLiu",
+  "license": "MIT",
+  "prettier": {
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.3",
+    "parcel": "^2.6.1",
+    "rollup": "^2.75.6",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {}
+}
