@@ -142,7 +142,7 @@ foo.set("something", Date.now() - 1000);
 console.log(foo.getMeta()); // IAtom<"foo",string>
 ```
 
-上述代码将打印原子 "foo" 的相关信息，数据类型参考 [概念][概念] 部分。
+上述代码将打印原子 "foo" 的相关信息，数据类型参考 [概念](#概念) 部分。
 
 ### 删除数据
 
@@ -215,7 +215,7 @@ new Store({ storageKey: "app" });
 new Store({ storageKey: "app" }); // error
 ```
 
-构造 Store 时可以传递 storageKey 参数，它被用于标记当前的实例，同时作用于本地存储的 key 值。多个应用可以按一下方式获取 Store：
+构造 Store 时可以传递 storageKey 参数，它被用于标记当前的实例，同时作用于本地存储的 key 值。多个应用可以按以下方式获取 Store：
 
 ```js
 const store1 = new Store({ storageKey: "app1" });
@@ -361,7 +361,7 @@ new Store({
   - 类型：`atom<D = any>(key: K): Atom<K, D>`
   - 参数：
     - key：数据的键名。
-  - 返回值：一个实例化的 [Atom][atom] 类。
+  - 返回值：一个实例化的 [Atom](#Atom) 类。
 
 - getAtoms：获取所有原子数据。
 
