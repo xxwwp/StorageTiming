@@ -33,4 +33,4 @@ Welcome to the community to translate according to the Chinese document
 
 - [中文文档][1]
 
-[1]: ./docs/zh.md
+[1]: https://github.com/xxwwp/StorageTiming/blob/main/docs/zh.md
