@@ -384,6 +384,17 @@ new Store({
 
 **这个类实现对某一个原子数据的控制，它的实例由 Store 类的 atom 方法的返回。**
 
+它有两个类型参数，原子的键类型和存储的值类型：
+
+```ts
+type key = number | string;
+class Atom<K extends Key, D = any> {
+  /* ... */
+}
+```
+
+可以在使用 `store.atom<D>` 时设置泛型 `D`。
+
 **方法：**
 
 - getMeta：数据的相关信息。
