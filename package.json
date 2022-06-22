@@ -1,6 +1,6 @@
 {
   "name": "storage-timing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Encapsulate localStorage and sessionStorage to increase the validity period of stored data.",
   "homepage": "https://github.com/xxwwp/StorageTiming",
   "main": "index.js",
@@ -12,8 +12,7 @@
   "files": [
     "lib/index.d.ts",
     "lib/index.js",
-    "lib/index.es.js",
-    "lib/index.umd.js"
+    "lib/index.umd.min.js"
   ],
   "license": "MIT",
   "author": "JiahaoLiu",
