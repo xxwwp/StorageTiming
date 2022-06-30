@@ -85,6 +85,7 @@ export class StorageTiming<K extends Key = Key> {
   /** 版本检查 */
   private versionCheck() {
     if (this.version === this.modal.version) return;
+    const oldVersion = this.modal.version;
     this.modal.version = this.version;
     const newAtoms: IAtom<K, any>[] = [];
     this.onVersionChange?.(
@@ -98,7 +99,7 @@ export class StorageTiming<K extends Key = Key> {
           newAtoms.splice(index, 1, atom);
         }
       },
-      this.modal.version
+      oldVersion
     ) ?? [];
     this.modal.atoms = newAtoms;
     this.save();
