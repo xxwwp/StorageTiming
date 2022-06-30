@@ -73,9 +73,10 @@ const st4 = new Store<ST4Keys>({
   storageKey: "st4",
   version: st4Version,
   clearTimeout: true,
-  onVersionChange(old, retain) {
+  onVersionChange(old, retain, oldVersion) {
     assert(!!old.find((v) => v.key === "foo"), true, "版本迭代获取旧数据");
     assert(old.length, 2, "版本迭代过滤旧数据中的超时数据");
+    assert(st4Version !== oldVersion, true, "版本号检测");
 
     old.forEach((atom) => {
       if (atom.key === "baz") {
@@ -120,5 +121,9 @@ assert(st6Foo.get(), "value", "remove 后再次 set 和 get");
 // 数据损坏测试
 
 localStorage.setItem("st7", "zxczxc");
+console.log(
+  "%c下面报错SyntaxError: Unexpected token z in JSON at position 0，并且含有对应的警告是被允许的，这是测试的一部分。",
+  "color:silver"
+);
 const st7 = new Store({ storageKey: "st7" });
 assert(st7.atom("foo").get(100), 100, "数据格式损坏获取");
