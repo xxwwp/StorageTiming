@@ -1,6 +1,6 @@
 {
   "name": "storage-timing",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Encapsulate localStorage and sessionStorage to increase the validity period of stored data.",
   "homepage": "https://github.com/xxwwp/StorageTiming",
   "main": "index.js",
@@ -26,6 +26,8 @@
   "keywords": [
     "storage",
     "timeout",
+    "timing",
+    "timer",
     "localStorage",
     "sessionStorage"
   ],
