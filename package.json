@@ -1,9 +1,9 @@
 {
   "name": "storage-timing",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Encapsulate localStorage and sessionStorage to increase the validity period of stored data.",
   "homepage": "https://github.com/xxwwp/StorageTiming",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "set NODE_ENV=production&& npx rollup -c",
